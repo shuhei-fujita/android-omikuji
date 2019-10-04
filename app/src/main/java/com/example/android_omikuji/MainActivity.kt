@@ -1,5 +1,6 @@
 package com.example.android_omikuji
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -18,7 +19,14 @@ class MainActivity : AppCompatActivity() {
 
             val n = Random.nextInt(results.count()) //乱数代入
 
-            result_text.text = results.get(n)
+            //大吉の時は文字を赤くする実装
+            if (n == 0) {
+                result_text.setTextColor(Color.RED)
+            } else {
+                result_text.setTextColor(Color.parseColor("F#808080"))
+            }
+
+            result_text.text = results.get(n)   //result_buttonidのtext要素に代入
         }
     }
 }
