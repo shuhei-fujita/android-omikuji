@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
             if (n == 0) {
                 result_text.setTextColor(Color.RED)
             } else {
-                result_text.setTextColor(Color.parseColor("F#808080"))
+                result_text.setTextColor(Color.GRAY)
             }
 
             result_text.text = results.get(n)   //result_buttonidのtext要素に代入
